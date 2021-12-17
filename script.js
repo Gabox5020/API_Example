@@ -14,12 +14,14 @@ async function cargarUrl(url) {
 async function clickBoton() {
 
     let pais = document.getElementById('selectPais').value;
-    alert(pais)
-
-    let json = await cargarUrl('https://api.covid19tracking.narrativa.com/api/2020-05-22/country/spain');
+    let fecha = document.getElementById('inputFecha').value;
+    alert(fecha)
+    
+    let url = `https://api.covid19tracking.narrativa.com/api/2020-05-22/country/${pais}`;
+    let json = await cargarUrl(url);
     console.log(json)
     
-    let estadisticas = json.dates["2020-05-22"].countries.Spain
+    let estadisticas = json.dates["2020-05-22"].countries[pais];
     console.log(estadisticas);
 
     document.getElementById('today_confirmed').innerHTML = estadisticas.today_confirmed;

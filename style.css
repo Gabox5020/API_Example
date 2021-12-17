@@ -1,0 +1,14 @@
+.contenedor {
+    border: 2px dashed #DDD;
+    padding: 5px 20px;
+    border-radius: 25px;
+    background-color: #8f34a3;
+    color: #002d2c;
+    font-family: cursive;
+    width: 600px;
+    margin:auto;
+}
+
+body {
+    background: #321638;
+}

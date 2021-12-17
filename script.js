@@ -12,6 +12,10 @@ async function cargarUrl(url) {
 }
 
 async function clickBoton() {
+
+    let pais = document.getElementById('selectPais').value;
+    alert(pais)
+
     let json = await cargarUrl('https://api.covid19tracking.narrativa.com/api/2020-05-22/country/spain');
     console.log(json)
     
